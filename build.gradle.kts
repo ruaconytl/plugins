@@ -9,6 +9,7 @@ plugins {
     alias(libs.plugins.changelog) // Gradle Changelog Plugin
     alias(libs.plugins.qodana) // Gradle Qodana Plugin
     alias(libs.plugins.kover) // Gradle Kover Plugin
+//    id("hd.tiny.check")
 }
 
 group = providers.gradleProperty("pluginGroup").get()
@@ -22,7 +23,10 @@ kotlin {
 // Configure project's dependencies
 repositories {
     mavenCentral()
-
+    maven {
+        url = uri("http://repo.volio.vn/repository/maven-s3/")
+        isAllowInsecureProtocol = true
+    }
     // IntelliJ Platform Gradle Plugin Repositories Extension - read more: https://plugins.jetbrains.com/docs/intellij/tools-intellij-platform-gradle-plugin-repositories-extension.html
     intellijPlatform {
         defaultRepositories()

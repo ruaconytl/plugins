@@ -9,7 +9,10 @@
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.ruaconytl.plugins.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <toolWindow factoryClass="com.github.ruaconytl.plugins.toolWindow.MyToolWindowFactory" id="HDProTools"
+                    icon="/icons/hd_icon.svg"
+        />
         <postStartupActivity implementation="com.github.ruaconytl.plugins.startup.MyProjectActivity" />
     </extensions>
+
 </idea-plugin>
